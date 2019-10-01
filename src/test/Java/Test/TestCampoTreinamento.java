@@ -38,7 +38,9 @@ public class TestCampoTreinamento {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("file:///Users/dionismoreira/Desktop/campo-treinamento/componentes.html");
-
+        driver.findElement(By.id("elementosForm:comidaFavorita:0")).click();
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:0")).isSelected());
+        driver.quit();
 
     }
 }
